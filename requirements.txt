@@ -2,11 +2,6 @@
 snowflake-snowpark-python
 streamlit
 
-pip install library 
-
-pip freeze > requirement.txt
-
-
 pip install -r requirements.txt 
 
 pip install -- upgrade pip
