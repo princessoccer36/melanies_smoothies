@@ -5,3 +5,4 @@ streamlit
 pip install -r requirements.txt 
 
 pip install pip==25.3
+pip install --upgrade pip
