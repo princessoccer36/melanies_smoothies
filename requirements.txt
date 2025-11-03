@@ -1,4 +1,7 @@
-definition_version: 2
+#requirements.txt
+snowflake-snowpark-python
+streamlit
+
 entities:
   pkg:
     type: application package
