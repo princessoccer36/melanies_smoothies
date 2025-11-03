@@ -1,0 +1,29 @@
+definition_version: 2
+entities:
+  pkg:
+    type: application package
+    identifier: <name_of_app_pkg>
+    stage: app_src.stage
+    manifest: app/manifest.yml
+    artifacts:
+      - src: app/*
+        dest: ./
+      - src: src/module-add/target/add-1.0-SNAPSHOT.jar
+        dest: module-add/add-1.0-SNAPSHOT.jar
+      - src: src/module-ui/src/*
+        dest: streamlit/
+    meta:
+      role: <your_app_pkg_owner_role>
+      warehouse: <your_app_pkg_warehouse>
+      post_deploy:
+        - sql_script: scripts/any-provider-setup.sql
+        - sql_script: scripts/shared-content.sql
+  app:
+    type: application
+    identifier: <name_of_app>
+    from:
+      target: pkg
+    debug: <true|false>
+    meta:
+      role: <your_app_owner_role>
+      warehouse: <your_app_warehouse>
