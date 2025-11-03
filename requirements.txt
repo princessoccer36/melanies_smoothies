@@ -1,3 +1,11 @@
 #requirements.txt
 snowflake-snowpark-python
 streamlit
+
+pip install library 
+
+pip freeze > requirement.txt
+
+git add requirements.txt 
+git commit -m "Added library to requirements"
+git push origin main 
