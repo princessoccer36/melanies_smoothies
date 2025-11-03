@@ -6,6 +6,5 @@ pip install library
 
 pip freeze > requirement.txt
 
-git add requirements.txt 
-git commit -m "Added library to requirements"
-git push origin main 
+
+pip install -r requirements.txt 
